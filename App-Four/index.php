@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -17,7 +16,7 @@
     <body>
         <div class="contianer">
           <div class="">
-            <h3 id="main-title" align="center">Live Table Add, Edit, and Delete using AJAX Jquery in PHP MySQL</h3>
+            <h1 id="main-title" align="center">Live CRUD Application. With AJAX, Jquery, PHP, and MySQL</h1>
             <div id="live_data">
 
             </div>

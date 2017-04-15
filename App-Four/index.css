@@ -1,32 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
 body {
     background-color: gray;
-  	background-image: url("tycho-atsma-157134.jpg");
+  	background-image: url("rawpixel-com-196464.jpg");
     position: relative;
     height: 100vh;
-    background: url('tycho-atsma-157134.jpg') no-repeat center center fixed;
+    background: url('rawpixel-com-196464.jpg') no-repeat top center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     background-image:
     -webkit-image-set(
-        "tycho-atsma-157134.jpg" 1x,
-        "tycho-atsma-157134.jpg" 2x,
+        "rawpixel-com-196464.jpg" 1x,
+        "rawpixel-com-196464.jpg" 2x,
     );
     background-image:
         image-set(
-            "tycho-atsma-157134.jpg" 1x,
-            "tycho-atsma-157134.jpg" 2x,
+            "rawpixel-com-196464.jpg" 1x,
+            "rawpixel-com-196464.jpg" 2x,
         );
 }
 #main-title {
-    margin: 40px 40px 34px 40px;
+  max-width: 400px;
+  width: 80%;
+  margin: 40px auto;
     color: white;
     text-shadow: 1px 2px 3px black;
+    font-family: 'Roboto', sans-serif;
 }
 #table-container {
-    background-color: rgba(7, 8, 24, .56);
-    padding: 20px 20px 0 20px;
+    background-color: rgba(7, 8, 24, .76);
+    padding: 20px 20px 1px 20px;
+    max-width: 600px;
+    width: 95%;
+    margin: 0 auto;
+
+    /*margin: 0 auto;
+    max-width: 500px;
+    width: 95%;*/
+    border-radius: 1%;
 }
 #table {
     color: white;
@@ -37,13 +49,16 @@ body {
     border-color: rgb(162, 167, 180);
 }
 #table td {
-    border: 1px solid rgb(162, 167, 180);
+
+}
+tbody, thead, tr, td, th {
+  border-style: hidden;
 }
 .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
   background-color: rgba(7, 8, 24, .9);
 }
 .btn_delete, .btn_add {
-    margin-left: 10px;
+
 
 }
 .btn_add span {

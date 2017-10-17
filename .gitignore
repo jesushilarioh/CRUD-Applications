@@ -71,3 +71,6 @@ Temporary Items
 # Directories potentially created on remote AFP share
 
 # End of https://www.gitignore.io/api/osx,macos
+
+/PHP/crud-app-27/config.php
+/PHP/App-Four/connect.php

@@ -1,4 +1,5 @@
 <?php
+include_once 'config.php';
 if (isset($_POST['update'])) {
   $id = mysqli_real_escape_string($mysqli, $_POST["id"]);
   $name = mysqli_real_escape_string($mysqli, $_POST['name']);
@@ -16,7 +17,7 @@ if (isset($_POST['update'])) {
       echo '<div class="alert alert-danger" role="alert"><span class="alert-link">Email</span> field is empty.</div>';
     }
   } else {
-    $result = mysqli_query($mysqli, "UPDATE crud_app_27 SET name='$name', age='$age', email='$email' WHERE id=$id");
+    $result = mysqli_query($mysqli, "UPDATE crud_app_27 SET name='$name', age='$age', email='$email' WHERE id='$id'");
 
     header("Location: index.php");
   }
@@ -25,7 +26,7 @@ if (isset($_POST['update'])) {
 <?php
 $id = $_GET['id'];
 
-$result = mysqli_query($mysqli, "SELECT FROM crud_app_27 WHERE id = $id");
+$result = mysqli_query($mysqli, "SELECT * FROM crud_app_27 WHERE id = '$id'");
 
 while ($res = mysqli_fetch_array($result)) {
   $name = $res['name'];
@@ -47,7 +48,7 @@ while ($res = mysqli_fetch_array($result)) {
     <div class="container">
       <a href="index.php">Home</a>
 
-      <form action="edit.php" method="post" name="form1">
+      <form action="update.php" method="post" name="form1">
         <div class="form-group">
           <label for="name">Name</label>
           <input type="text" class="form-control" id="name" name="name" value="<?php echo $name;?>">

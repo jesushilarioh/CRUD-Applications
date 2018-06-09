@@ -2,6 +2,8 @@
     # First, tell code to run only if the form has been submitted
     if (isset($_POST['submit'])) {
         require "../config.php";
+        require "../common.php";
+
 
         try {
             $connection = new PDO($dsn, $username, $password, $options);
@@ -9,10 +11,10 @@
             // Insert new user code goes here
             $new_user = array (
                 "firstname" => $_POST['firstname'],
-                "lastname" => $_POST['lastname'],
-                "email" => $_POST['email'],
-                "age" => $_POST['age'],
-                "location" => $_POST['location']
+                "lastname"  => $_POST['lastname'],
+                "email"     => $_POST['email'],
+                "age"       => $_POST['age'],
+                "location"  => $_POST['location']
             );
 
             # execute SQL code
@@ -38,6 +40,9 @@
 
 ?>
 <?php include "templates/header.php"; ?>
+<?php if (isset($_POST['submit']) && $statement) { ?>
+    <blockquote><?php echo escape($_POST['firstname']); ?> successfully added!</blockquote>
+<?php } ?>
 <h2>Add a user</h2>
 <form method="post">
     <label for="firstname">First Name</label>

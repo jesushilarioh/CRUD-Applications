@@ -1,35 +1,20 @@
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
 
-# Precompiled Headers
-*.gch
-*.pch
+# Created by https://www.gitignore.io/api/osx,linux,macos,windows
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+### Linux ###
+*~
 
-# Fortran module files
-*.mod
-*.smod
+# temporary files which can be created if a process still has a handle open of a deleted file
+.fuse_hidden*
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+# KDE directory preferences
+.directory
 
-# Executables
-*.exe
-*.out
-*.app
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
 
-
-# Created by https://www.gitignore.io/api/osx,macos
+# .nfs files are created when an open file is removed but is still being accessed
+.nfs*
 
 ### macOS ###
 *.DS_Store
@@ -38,7 +23,6 @@
 
 # Icon must end with two \r
 Icon
-
 
 # Thumbnails
 ._*
@@ -63,15 +47,32 @@ Temporary Items
 
 # Icon must end with two \r
 
-
 # Thumbnails
 
 # Files that might appear in the root of a volume
 
 # Directories potentially created on remote AFP share
 
-# End of https://www.gitignore.io/api/osx,macos
+### Windows ###
+# Windows thumbnail cache files
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
 
-/PHP/crud-app-27/config.php
-/PHP/App-Four/connect.php
-/PHP/App-Four/connect2.php
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+
+# End of https://www.gitignore.io/api/osx,linux,macos,windows

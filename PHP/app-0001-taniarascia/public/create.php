@@ -1,9 +1,10 @@
 <?php
     # First, tell code to run only if the form has been submitted
+    require "../config.php";
+    require "../common.php";
+    
     if (isset($_POST['submit'])) {
-        require "../config.php";
-        require "../common.php";
-
+        if(!hash_equals($_SESSION["csrf"], $_POST["csrf"])) die();
 
         try {
             $connection = new PDO($dsn, $username, $password, $options);
@@ -45,6 +46,7 @@
 <?php } ?>
 <h2>Add a user</h2>
 <form method="post">
+    <input name="csrf" type="hidden" value="<?php echo escape($_SESSION["csrf"]); ?>">
     <label for="firstname">First Name</label>
     <input type="text" name="firstname" id="firstname">
     <label for="lastname">Last Name</label>
